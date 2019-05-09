@@ -12,7 +12,7 @@ class CreatePayment
 
   def create_payment
     user.with_lock do
-      user.balance = user.balance + amount
+      user.balance = user.balance + amount.to_i
       payment.save!
       user.save!
     end

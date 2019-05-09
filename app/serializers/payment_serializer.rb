@@ -1,9 +1,5 @@
 class PaymentSerializer < ApplicationSerializer
-  attributes :user_full_name, :amount, :created_at
-
-  def user_full_name
-    object.user.full_name
-  end
+  attributes :user_id, :amount, :created_at
 
   def created_at
     object.created_at.iso8601
