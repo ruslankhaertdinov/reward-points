@@ -1,3 +1,5 @@
 class Payment < ApplicationRecord
-  validates :user, :amount, :created_at, presence: true
+  belongs_to :user
+
+  validates :user, :amount, presence: true
 end

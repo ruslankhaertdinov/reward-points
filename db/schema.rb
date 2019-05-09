@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_05_09_060208) do
     t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "current_amount", default: 0, null: false
+    t.integer "balance", default: 0, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

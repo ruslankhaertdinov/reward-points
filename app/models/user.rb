@@ -1,7 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
 
-  validates :email, :current_amount, presence: true
-  validates :password, length: { minimum: 6 }
+  has_many :payments
+
+  validates :email, :balance, presence: true
+  validates :password, length: { minimum: 6 }, on: :create
   validates :email, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 end
