@@ -4,7 +4,7 @@ module V1
       skip_before_action :authenticate_user!
 
       def index
-        respond_with payments, each_serializer: PaymentSerializer
+        respond_with payments, each_serializer: PaymentSummarySerializer
       end
 
       def create
