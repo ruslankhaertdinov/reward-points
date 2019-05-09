@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.5.1"
+ruby "2.6.3"
 
 # the most important stuff
 gem "pg"
@@ -39,6 +39,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "rubocop"
   gem "rubocop-rspec"
+  gem "dotenv-rails"
 end
 
 group :test do
